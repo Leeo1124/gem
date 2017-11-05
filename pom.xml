@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
 	<groupId>com.leeo</groupId>
 	<artifactId>gem</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
@@ -12,6 +13,10 @@
 	<modules>
 		<module>gem-core</module>
 		<module>gem-center</module>
+		<module>gem-config</module>
+		<module>gem-admin</module>
+		<module>gem-monitor</module>
+		<module>gem-gate</module>
 	</modules>
 	
 	<parent>
@@ -24,6 +29,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <spring-cloud.version>Dalston.SR4</spring-cloud.version>
         <gem.version>1.0.0-SNAPSHOT</gem.version>
         <mybatisplus-spring-boot-starter.version>1.0.4</mybatisplus-spring-boot-starter.version>
         <shiro.version>1.4.0</shiro.version>
@@ -58,22 +64,15 @@
                 <artifactId>gem-core</artifactId>
                 <version>${gem.version}</version>
             </dependency>
-			<!--  
-	        <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Dalston.SR1</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-	        -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>1.5.8.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+            
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatisplus-spring-boot-starter</artifactId>
