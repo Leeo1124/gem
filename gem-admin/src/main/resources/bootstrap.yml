@@ -1,0 +1,25 @@
+server:
+    port: 8090
+    
+feign:
+  hystrix:
+    enabled: true
+
+spring:
+    application:
+        name: gem-admin
+    cloud:
+      config:
+        name: config-client
+        label: master
+        profile: dev
+#        uri: http://localhost:8060/ # 单机
+        discovery: # 集群
+          enabled: true
+          serviceId: gem-config
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://center1:8071/eureka/,http://center2:8072/eureka/,http://center3:8073/eureka/
+      

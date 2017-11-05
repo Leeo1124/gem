@@ -1,0 +1,21 @@
+server:
+    port: 8071
+
+spring:
+    application:
+        name: gem-center
+    profiles:
+      active: center1
+
+eureka:
+  instance:
+    hostname: center1 #需配置/etc/hosts 127.0.0.1 center1
+#    ipAddress: 192.168.1.103
+#    preferIpAddress: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+#      defaultZone: http://192.168.1.103:8071/eureka/,http://192.168.1.104:8072/eureka/,http://192.168.1.105:8073/eureka/
+      defaultZone: http://center1:8071/eureka/,http://center2:8072/eureka/,http://center3:8073/eureka/
+

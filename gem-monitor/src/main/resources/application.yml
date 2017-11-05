@@ -1,0 +1,9 @@
+spring:
+    application:
+        name: gem-monitor
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://center1:8071/eureka/,http://center2:8072/eureka/,http://center3:8073/eureka/
+      

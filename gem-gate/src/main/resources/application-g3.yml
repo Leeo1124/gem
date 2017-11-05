@@ -1,0 +1,6 @@
+server:
+    port: 8042
+    
+spring:
+    profiles:
+      active: g2    
