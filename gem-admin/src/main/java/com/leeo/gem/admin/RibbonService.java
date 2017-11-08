@@ -13,8 +13,8 @@ public class RibbonService {
 	RestTemplate restTemplate;
 
 	@HystrixCommand(fallbackMethod = "hiError")//熔断方法
-	public String helloService(String name) {
-		return restTemplate.getForObject("http://GEM-MONITOR/hello?name=" + name, String.class);
+	public String ribbon(String name) {
+		return restTemplate.getForObject("http://GEM-TASK/hello?name=" + name, String.class);
 	}
 	
 	public String hiError(String name) {

@@ -1,5 +1,5 @@
 server:
-    port: 8090
+    port: 8030
     
 feign:
   hystrix:
@@ -7,7 +7,7 @@ feign:
 
 spring:
     application:
-        name: gem-admin
+        name: gem-task
     cloud:
       config:
         name: admin

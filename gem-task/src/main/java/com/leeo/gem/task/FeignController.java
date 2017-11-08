@@ -1,4 +1,4 @@
-package com.leeo.gem.admin;
+package com.leeo.gem.task;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,14 +6,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class RibbonControler {
+public class FeignController {
 
 	@Autowired
-	RibbonService ribbonService;
+	FeignService feignService;
 
-	@GetMapping("/ribbon")
-	public String ribbon(@RequestParam String name) {
-		return ribbonService.ribbon(name);
+	@GetMapping(value = "/feign")
+	public String feign(@RequestParam String name) {
+		return feignService.sayHiFromClientOne(name);
 	}
-
 }

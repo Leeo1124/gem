@@ -17,6 +17,7 @@
 		<module>gem-admin</module>
 		<module>gem-monitor</module>
 		<module>gem-gate</module>
+		<module>gem-task</module>
 	</modules>
 	
 	<parent>

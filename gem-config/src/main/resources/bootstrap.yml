@@ -1,0 +1,30 @@
+server:
+  port: 8060
+  
+spring:
+  application:
+    name: gem-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Leeo1124/SpringcloudConfig
+          searchPaths: respo
+          username: aa
+          password: aa
+      label: master
+      
+#  rabbitmq:
+#    host: 192.168.99.100
+#    port: 15672
+#    username: admin
+#    password: 123456
+    
+management:
+  security:
+     enabled: false
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://center1:8071/eureka/,http://center2:8072/eureka/,http://center3:8073/eureka/

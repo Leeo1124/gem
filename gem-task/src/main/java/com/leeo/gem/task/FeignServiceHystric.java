@@ -1,4 +1,4 @@
-package com.leeo.gem.admin;
+package com.leeo.gem.task;
 
 import org.springframework.stereotype.Component;
 
