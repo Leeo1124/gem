@@ -1,5 +1,13 @@
 spring:
   profiles:
     active: center1
+    
+logging:
+  file: /data/logs/gem-center/center.log
+  level:
+    org.springframework: INFO
+    org.apache.ibatis.jdbc: DEBUG
+    org.apache.shiro.session: INFO
+    com.leeo.gem: DEBUG
 
     
