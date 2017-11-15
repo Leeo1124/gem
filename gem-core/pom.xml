@@ -10,7 +10,6 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>gem-core</artifactId>
-	<packaging>jar</packaging>
 
 	<dependencies>
 		<!--通用依赖 -->
@@ -38,10 +37,6 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -95,5 +90,22 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+	
+	<build>
+        <finalName>gem-core</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
